@@ -3,7 +3,7 @@ import { Web3Provider } from '@ethersproject/providers';
 import { Web3ReactProvider } from '@web3-react/core';
 import './App.css';
 import Header from './components/Header';
-import LendingTokens from './components/LendingTokens';
+// import LendingTokens from './components/LendingTokens';
 import BorrowingTokens from './components/BorrowingTokens';
 
 function getLibrary(provider: any): Web3Provider {
