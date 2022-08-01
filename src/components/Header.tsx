@@ -87,9 +87,9 @@ const Header = () => {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="#" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2022/05/Shell_logo.svg.png?auto=format&q=60&fit=max&w=930"
               className="mr-3 h-6 sm:h-9"
-              alt="Flowbite Logo"
+              alt="Logo"
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               Uni3
