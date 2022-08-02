@@ -53,7 +53,7 @@ const questions = [
 ];
 
 const Questions = () => {
-  const [progress, setProgress] = useState(0);
+  // const [progress, setProgress] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState<any[]>([]);
 
   const addCorrectAnswer = (answer: any) => {
