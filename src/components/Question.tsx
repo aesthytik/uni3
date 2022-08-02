@@ -2,11 +2,22 @@ import React, { useState } from 'react';
 import { BsCircle } from 'react-icons/bs';
 import { MdCancel, MdCheck } from 'react-icons/md';
 
-const Question = ({ question, index }: any) => {
+const Question = ({
+  question,
+  index,
+  addCorrectAnswer,
+  removeInCorrectAnswer,
+}: any) => {
   const [currentSelection, setCurrentSelection] = useState<number | null>(null);
 
-  const handleSelection = (id: number) => {
-    setCurrentSelection(id);
+  const handleSelection = (option: any) => {
+    setCurrentSelection(option.id);
+    if (option.isCorrect) {
+      addCorrectAnswer(question);
+    }
+    if (!option.isCorrect) {
+      removeInCorrectAnswer(question);
+    }
   };
 
   return (
@@ -18,8 +29,8 @@ const Question = ({ question, index }: any) => {
         {question.options.map((option: any) => (
           <>
             <div
-              className="p-2 w-full"
-              onClick={() => handleSelection(option.id)}
+              className="p-2 w-full cursor-pointer"
+              onClick={() => handleSelection(option)}
             >
               <div className="bg-gray-100 rounded flex p-4 h-full items-center">
                 {currentSelection === option.id && (
