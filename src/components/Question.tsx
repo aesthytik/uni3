@@ -60,7 +60,15 @@ const Question = ({
               </div>
             </div>
             {currentSelection === option.id && !option.isCorrect && (
-              <p className="p-2 text-left text-base">{option.explanation}</p>
+              <>
+                <p className="p-2 text-left text-base">{option.explanation}</p>
+                <p className="p-2 text-left mt-4">
+                  Reference:{' '}
+                  <a href={option.link} className="text-blue-600">
+                    {option.link}
+                  </a>
+                </p>
+              </>
             )}
           </>
         ))}
